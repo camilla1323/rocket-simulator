@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd8iugq41qokf"]
+
+[ext_resource type="Texture2D" uid="uid://w5ipapdgfwu2" path="res://art/Raket.png" id="1_cdmql"]
+[ext_resource type="Script" path="res://raket.gd" id="1_gmtnx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqval"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cdmql")
+}],
+"loop": true,
+"name": &"flyve",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2n06"]
+size = Vector2(243, 364)
+
+[node name="Raket" type="Area2D"]
+script = ExtResource("1_gmtnx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(57, -60)
+sprite_frames = SubResource("SpriteFrames_pqval")
+animation = &"flyve"
+
+[node name="Raket" type="Sprite2D" parent="."]
+position = Vector2(1854, 1523)
+texture = ExtResource("1_cdmql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(36.5, -215)
+shape = SubResource("RectangleShape2D_p2n06")
+one_way_collision_margin = 2.3
