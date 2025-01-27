@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://042dau4175ic"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1210.0
+offset_bottom = 678.0
