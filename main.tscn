@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bjatg1686i3iv" path="res://månen.tscn" id="1_032pn"]
 [ext_resource type="Script" path="res://main.gd" id="1_maw3l"]
 [ext_resource type="PackedScene" uid="uid://dd8iugq41qokf" path="res://Raket.tscn" id="2_vuffw"]
-[ext_resource type="PackedScene" uid="uid://cbumjd7s4hf2d" path="res://Alien.tscn" id="4_p14gn"]
+[ext_resource type="PackedScene" uid="uid://573ndab4lwmg" path="res://alienmove.tscn" id="5_m34ou"]
 
 [sub_resource type="Curve2D" id="Curve2D_nxlp4"]
 _data = {
@@ -16,32 +16,23 @@ point_count = 2
 script = ExtResource("1_maw3l")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_right = 1158.0
 offset_bottom = 648.0
 
 [node name="Baggrund" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(580, 338)
 scale = Vector2(2.19608, 2.69283)
 texture = ExtResource("1_0tp57")
 
 [node name="Area2D" parent="Baggrund" instance=ExtResource("1_032pn")]
-visible = false
 position = Vector2(-264.107, -142.972)
 scale = Vector2(0.455357, 0.371356)
 
 [node name="Raket" parent="." instance=ExtResource("2_vuffw")]
-visible = false
 position = Vector2(980, 205)
 
 [node name="StartPosition" type="Marker2D" parent="."]
-visible = false
 position = Vector2(927, 149)
-
-[node name="RigidBody2D" parent="." instance=ExtResource("4_p14gn")]
-visible = false
-position = Vector2(344, 496)
 
 [node name="AlienRute" type="Path2D" parent="."]
 curve = SubResource("Curve2D_nxlp4")
@@ -49,3 +40,6 @@ curve = SubResource("Curve2D_nxlp4")
 [node name="AlienStartPosition" type="PathFollow2D" parent="AlienRute"]
 position = Vector2(18, 610)
 rotation = -0.00286532
+
+[node name="Alien" parent="." instance=ExtResource("5_m34ou")]
+position = Vector2(149, -196)
