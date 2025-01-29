@@ -27,9 +27,7 @@ animations = [{
 radius = 44.0
 height = 134.0
 
-[node name="RigidBody2D" type="RigidBody2D"]
-collision_mask = 0
-gravity_scale = 0.0
+[node name="Alien" type="StaticBody2D"]
 script = ExtResource("1_5xmxb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

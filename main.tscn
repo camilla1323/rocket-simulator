@@ -20,12 +20,12 @@ offset_right = 1158.0
 offset_bottom = 648.0
 
 [node name="Baggrund" type="Sprite2D" parent="."]
-position = Vector2(580, 338)
+position = Vector2(661, 343)
 scale = Vector2(2.19608, 2.69283)
 texture = ExtResource("1_0tp57")
 
 [node name="Area2D" parent="Baggrund" instance=ExtResource("1_032pn")]
-position = Vector2(-264.107, -142.972)
+position = Vector2(-352.902, -125.147)
 scale = Vector2(0.455357, 0.371356)
 
 [node name="Raket" parent="." instance=ExtResource("2_vuffw")]
