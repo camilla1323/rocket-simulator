@@ -9,7 +9,7 @@ height = 6076.0
 [node name="månen" type="Area2D"]
 
 [node name="UntitledImage" type="Sprite2D" parent="."]
-position = Vector2(613, 811)
+position = Vector2(691, 760)
 rotation = -6.28319
 scale = Vector2(2.151, 1)
 texture = ExtResource("1_splpk")

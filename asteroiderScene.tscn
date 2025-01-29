@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://da8c8xm1j0sng"]
+
+[sub_resource type="GDScript" id="GDScript_ufu3c"]
+script/source = "extends Node2D
+@export var asteroiderScene: PackedScene  # Vælg asteroidescenen i Inspector
+@export var min_speed = 50
+@export var max_speed = 200
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	$Timer.start()  # Start timeren
+
+func _on_Timer_timeout():
+	spawn_asteroid()
+
+func spawn_asteroid():
+	# Instansier en asteroide fra scenen
+	var asteroide = asteroiderScene.instance()
+	
+	# Tilføj en PathFollow2D som parent for asteroiden
+	var path_follow = PathFollow2D.new()
+	path_follow.offset = randf() * $Path2D.curve.get_baked_length()  # Tilfældig placering på stien
+	path_follow.add_child(asteroide)
+	$Path2D.add_child(path_follow)
+	
+	# Sæt en tilfældig hastighed for asteroiden
+	#asteroid.speed = rand_range(min_speed, max_speed)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+	
+
+
+func _on_timer_timeout() -> void:
+	spawn_asteroid()
+"
+
+[sub_resource type="Curve2D" id="Curve2D_wv2vr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, 7, 0, 0, 0, 0, 1141, 10, 0, 0, 0, 0, 1140, 270, 0, 0, 0, 0, 4, 274, 0, 0, 0, 0, 13, 7)
+}
+point_count = 5
+
+[node name="AsteroiderScene" type="Node2D"]
+script = SubResource("GDScript_ufu3c")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(1.00352, 1.02622)
+scale = Vector2(0.99912, 0.996255)
+curve = SubResource("Curve2D_wv2vr")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
