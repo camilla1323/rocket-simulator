@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpqjm0ptx0y5i"]
+
+[ext_resource type="Script" path="res://asteroidescene.gd" id="1_s2w8w"]
+[ext_resource type="PackedScene" uid="uid://cdr5shd55ipga" path="res://asteroid.tscn" id="2_xo8la"]
+
+[sub_resource type="Curve2D" id="Curve2D_07jon"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 262.319, 60.7377, 0, 0, 0, 0, 1112.77, 56.4098)
+}
+point_count = 2
+
+[node name="Asteroidescene" type="Node2D"]
+script = ExtResource("1_s2w8w")
+asteroid_scene = ExtResource("2_xo8la")
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-12.8248, -46.1364)
+scale = Vector2(1.04768, 0.924242)
+curve = SubResource("Curve2D_07jon")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
