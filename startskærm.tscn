@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdpg838f53qbt"]
+
+[ext_resource type="Script" path="res://startskærm.gd" id="1_bxnda"]
+[ext_resource type="FontFile" uid="uid://vkhmh18xpgb2" path="res://fonts/Xolonium-Regular.ttf" id="2_kx0cl"]
+
+[node name="Startskærm" type="CanvasLayer"]
+script = ExtResource("1_bxnda")
+
+[node name="Startknap" type="Button" parent="."]
+offset_left = 164.0
+offset_top = 364.0
+offset_right = 478.0
+offset_bottom = 481.0
+theme_override_fonts/font = ExtResource("2_kx0cl")
+theme_override_font_sizes/font_size = 44
+text = "Start"
+
+[node name="Titel" type="Label" parent="."]
+offset_left = 301.0
+offset_top = 52.0
+offset_right = 865.0
+offset_bottom = 130.0
+theme_override_fonts/font = ExtResource("2_kx0cl")
+theme_override_font_sizes/font_size = 64
+text = "Rocket simulator"
+
+[node name="Infoknap" type="Button" parent="."]
+offset_left = 655.0
+offset_top = 359.0
+offset_right = 959.0
+offset_bottom = 479.0
+theme_override_fonts/font = ExtResource("2_kx0cl")
+theme_override_font_sizes/font_size = 44
+text = "Information"
+
+[node name="Highscore" type="Label" parent="."]
+offset_left = 465.0
+offset_top = 196.0
+offset_right = 676.0
+offset_bottom = 245.0
+theme_override_fonts/font = ExtResource("2_kx0cl")
+theme_override_font_sizes/font_size = 40
+text = "Highscore"
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="Startknap" to="." method="_on_startknap_pressed"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bao6yeucal0l3"]
+
+[node name="informationer" type="CanvasLayer"]
+
+[node name="VandretFart" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -30,10 +30,10 @@ position = Vector2(-352.902, -125.147)
 scale = Vector2(0.455357, 0.371356)
 
 [node name="Raket" parent="." instance=ExtResource("2_vuffw")]
-position = Vector2(980, 205)
+position = Vector2(682, 70)
 
 [node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(927, 149)
+position = Vector2(1057, 92)
 
 [node name="AlienRute" type="Path2D" parent="."]
 curve = SubResource("Curve2D_nxlp4")
@@ -46,3 +46,4 @@ rotation = -0.00286532
 position = Vector2(149, -196)
 
 [node name="Asteroidescene" parent="." instance=ExtResource("6_xslr6")]
+position = Vector2(-389, 14)

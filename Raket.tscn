@@ -21,13 +21,13 @@ size = Vector2(76, 116.5)
 script = ExtResource("1_gmtnx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(76, -60)
+position = Vector2(330, 197)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_pqval")
 animation = &"flyve"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(69, -107.75)
+position = Vector2(326, 144)
 shape = SubResource("RectangleShape2D_a78aw")
 one_way_collision_margin = 2.3
 
