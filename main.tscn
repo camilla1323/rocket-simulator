@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://br8kry8ra7tx0"]
+[gd_scene load_steps=8 format=3 uid="uid://br8kry8ra7tx0"]
 
 [ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="1_0tp57"]
 [ext_resource type="PackedScene" uid="uid://bjatg1686i3iv" path="res://månen.tscn" id="1_032pn"]
 [ext_resource type="Script" path="res://main.gd" id="1_maw3l"]
 [ext_resource type="PackedScene" uid="uid://dd8iugq41qokf" path="res://Raket.tscn" id="2_vuffw"]
 [ext_resource type="PackedScene" uid="uid://573ndab4lwmg" path="res://alienmove.tscn" id="5_m34ou"]
+[ext_resource type="PackedScene" uid="uid://bpqjm0ptx0y5i" path="res://asteroidescene.tscn" id="6_xslr6"]
 
 [sub_resource type="Curve2D" id="Curve2D_nxlp4"]
 _data = {
@@ -43,3 +44,5 @@ rotation = -0.00286532
 
 [node name="Alien" parent="." instance=ExtResource("5_m34ou")]
 position = Vector2(149, -196)
+
+[node name="Asteroidescene" parent="." instance=ExtResource("6_xslr6")]
