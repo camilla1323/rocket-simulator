@@ -1,23 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxn51kvxg4nl1"]
+[gd_scene load_steps=4 format=3 uid="uid://dgkdievibcx0h"]
 
-[ext_resource type="Script" path="res://startskærm.gd" id="1_35nto"]
-[ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="2_vaje3"]
-[ext_resource type="FontFile" uid="uid://vkhmh18xpgb2" path="res://fonts/Xolonium-Regular.ttf" id="3_g3one"]
+[ext_resource type="Script" path="res://startskærm.gd" id="1_aywhn"]
+[ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="2_wd7vs"]
+[ext_resource type="FontFile" uid="uid://vkhmh18xpgb2" path="res://fonts/Xolonium-Regular.ttf" id="3_s5xra"]
 
-[node name="Dødskærm" type="CanvasLayer"]
-script = ExtResource("1_35nto")
+[node name="Vindeskærm" type="CanvasLayer"]
+script = ExtResource("1_aywhn")
 
 [node name="Istockphoto-1354982067-612x612" type="Sprite2D" parent="."]
 position = Vector2(567, 409)
 scale = Vector2(2.12909, 3.16212)
-texture = ExtResource("2_vaje3")
+texture = ExtResource("2_wd7vs")
 
 [node name="Startknap" type="Button" parent="."]
 offset_left = 164.0
 offset_top = 364.0
 offset_right = 478.0
 offset_bottom = 481.0
-theme_override_fonts/font = ExtResource("3_g3one")
+theme_override_fonts/font = ExtResource("3_s5xra")
 theme_override_font_sizes/font_size = 44
 text = "Start"
 
@@ -30,9 +30,9 @@ offset_top = 195.0
 offset_right = 137.0
 offset_bottom = 252.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_g3one")
+theme_override_fonts/font = ExtResource("3_s5xra")
 theme_override_font_sizes/font_size = 52
-text = "Øv, du døde!"
+text = "Tillykke! Du vandt"
 
 [node name="Titel" type="Label" parent="."]
 anchors_preset = 5
@@ -43,7 +43,7 @@ offset_top = 82.0
 offset_right = 282.0
 offset_bottom = 160.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_g3one")
+theme_override_fonts/font = ExtResource("3_s5xra")
 theme_override_font_sizes/font_size = 64
 text = "Rocket simulator"
 
@@ -52,7 +52,7 @@ offset_left = 655.0
 offset_top = 359.0
 offset_right = 959.0
 offset_bottom = 479.0
-theme_override_fonts/font = ExtResource("3_g3one")
+theme_override_fonts/font = ExtResource("3_s5xra")
 theme_override_font_sizes/font_size = 44
 text = "Information"
 
@@ -68,7 +68,7 @@ offset_right = 105.5
 offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_g3one")
+theme_override_fonts/font = ExtResource("3_s5xra")
 theme_override_font_sizes/font_size = 40
 text = "Highscore"
 

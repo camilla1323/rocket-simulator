@@ -33,10 +33,30 @@ func _process(delta: float) -> void:
 	
 
 func _on_body_entered(body: Node2D) -> void:
+	if body.name == "Goal":  # Tjekker om objektet har navnet "Goal"
+		win()
+	else:
+		die()
+	
+	#hide() # Player disappears after being hit.
+	#hit.emit()
+	# Must be deferred as we can't change physics properties on a physics callback.
+	#$CollisionShape2D.set_deferred("disabled", true)
+	#print("Info button was pressed!")  # Debugging message
+	#get_tree().change_scene_to_file("res://dødskærm.tscn")
+	
+func die():
 	hide() # Player disappears after being hit.
 	hit.emit()
 	# Must be deferred as we can't change physics properties on a physics callback.
 	$CollisionShape2D.set_deferred("disabled", true)
+	print("Info button was pressed!")  # Debugging message
+	get_tree().change_scene_to_file("res://dødskærm.tscn")
+	
+func win():
+	print("Info button was pressed!")  # Debugging message
+	get_tree().change_scene_to_file("res://vindeskærm.tscn")
+	
 	
 	
 func start(pos):
