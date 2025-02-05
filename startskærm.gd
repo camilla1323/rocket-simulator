@@ -39,3 +39,8 @@ func update_score(score):
 	
 	
 	
+
+
+func _on_infoknap_pressed() -> void:
+	print("Info button was pressed!")  # Debugging message
+	get_tree().change_scene_to_file("res://infoskærm.tscn")

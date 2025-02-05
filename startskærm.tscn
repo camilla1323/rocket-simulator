@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdpg838f53qbt"]
+[gd_scene load_steps=4 format=3 uid="uid://cdpg838f53qbt"]
 
 [ext_resource type="Script" path="res://startskærm.gd" id="1_bxnda"]
+[ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="2_dsye8"]
 [ext_resource type="FontFile" uid="uid://vkhmh18xpgb2" path="res://fonts/Xolonium-Regular.ttf" id="2_kx0cl"]
 
 [node name="Startskærm" type="CanvasLayer"]
 script = ExtResource("1_bxnda")
+
+[node name="Istockphoto-1354982067-612x612" type="Sprite2D" parent="."]
+position = Vector2(585, 397)
+scale = Vector2(2.12909, 3.16212)
+texture = ExtResource("2_dsye8")
 
 [node name="Startknap" type="Button" parent="."]
 offset_left = 164.0
@@ -47,3 +53,4 @@ wait_time = 2.0
 one_shot = true
 
 [connection signal="pressed" from="Startknap" to="." method="_on_startknap_pressed"]
+[connection signal="pressed" from="Infoknap" to="." method="_on_infoknap_pressed"]

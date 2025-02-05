@@ -43,7 +43,7 @@ position = Vector2(18, 610)
 rotation = -0.00286532
 
 [node name="Alien" parent="." instance=ExtResource("5_m34ou")]
-position = Vector2(149, -196)
+position = Vector2(96, -23)
 
 [node name="Asteroidescene" parent="." instance=ExtResource("6_xslr6")]
 position = Vector2(-389, 14)
