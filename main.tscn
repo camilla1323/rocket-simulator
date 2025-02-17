@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://br8kry8ra7tx0"]
+[gd_scene load_steps=9 format=3 uid="uid://br8kry8ra7tx0"]
 
 [ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="1_0tp57"]
 [ext_resource type="PackedScene" uid="uid://bjatg1686i3iv" path="res://månen.tscn" id="1_032pn"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dd8iugq41qokf" path="res://Raket.tscn" id="2_vuffw"]
 [ext_resource type="PackedScene" uid="uid://573ndab4lwmg" path="res://alienmove.tscn" id="5_m34ou"]
 [ext_resource type="PackedScene" uid="uid://bpqjm0ptx0y5i" path="res://asteroidescene.tscn" id="6_xslr6"]
+[ext_resource type="PackedScene" uid="uid://bao6yeucal0l3" path="res://informationer.tscn" id="7_1shsm"]
 
 [sub_resource type="Curve2D" id="Curve2D_nxlp4"]
 _data = {
@@ -52,3 +53,6 @@ position = Vector2(394, -27)
 
 [node name="Alien3" parent="." instance=ExtResource("5_m34ou")]
 position = Vector2(823, -32)
+
+[node name="informationer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_1shsm")]
+player = NodePath("../Raket")
