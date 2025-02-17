@@ -1,5 +1,5 @@
 extends Area2D
-@export var speed = 150
+@export var speed = 80
 var screen_size
 signal hit
 var velocity: Vector2 = Vector2.ZERO

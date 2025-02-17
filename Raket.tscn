@@ -18,6 +18,7 @@ animations = [{
 size = Vector2(76, 116.5)
 
 [node name="Raket" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_gmtnx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
