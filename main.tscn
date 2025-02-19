@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://br8kry8ra7tx0"]
+[gd_scene load_steps=8 format=3 uid="uid://br8kry8ra7tx0"]
 
 [ext_resource type="Texture2D" uid="uid://dtfpjkk4lpd1s" path="res://art/istockphoto-1354982067-612x612.jpg" id="1_0tp57"]
 [ext_resource type="PackedScene" uid="uid://bjatg1686i3iv" path="res://månen.tscn" id="1_032pn"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dd8iugq41qokf" path="res://Raket.tscn" id="2_vuffw"]
 [ext_resource type="PackedScene" uid="uid://573ndab4lwmg" path="res://alienmove.tscn" id="5_m34ou"]
 [ext_resource type="PackedScene" uid="uid://bpqjm0ptx0y5i" path="res://asteroidescene.tscn" id="6_xslr6"]
-[ext_resource type="PackedScene" uid="uid://bao6yeucal0l3" path="res://informationer.tscn" id="7_1shsm"]
 
 [sub_resource type="Curve2D" id="Curve2D_nxlp4"]
 _data = {
@@ -26,11 +25,12 @@ position = Vector2(661, 343)
 scale = Vector2(2.19608, 2.69283)
 texture = ExtResource("1_0tp57")
 
-[node name="månen" parent="." instance=ExtResource("1_032pn")]
-position = Vector2(-17, 57)
+[node name="Area2D" parent="Baggrund" instance=ExtResource("1_032pn")]
+position = Vector2(-352.902, -125.147)
+scale = Vector2(0.455357, 0.371356)
 
 [node name="Raket" parent="." instance=ExtResource("2_vuffw")]
-position = Vector2(897, 20)
+position = Vector2(682, 70)
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(1057, 92)
@@ -43,19 +43,7 @@ position = Vector2(18, 610)
 rotation = -0.00286532
 
 [node name="Alien" parent="." instance=ExtResource("5_m34ou")]
-position = Vector2(-157, 11)
+position = Vector2(96, -23)
 
 [node name="Asteroidescene" parent="." instance=ExtResource("6_xslr6")]
 position = Vector2(-389, 14)
-
-[node name="Alien2" parent="." instance=ExtResource("5_m34ou")]
-position = Vector2(272, 10)
-
-[node name="Alien5" parent="." instance=ExtResource("5_m34ou")]
-position = Vector2(1025, 10)
-
-[node name="Alien3" parent="." instance=ExtResource("5_m34ou")]
-position = Vector2(729, 10)
-
-[node name="informationer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_1shsm")]
-player = NodePath("../Raket")
